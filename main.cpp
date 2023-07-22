@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
             break;
 
         if (frameNumber % frameSkip == 0) {
-            std::string imageName = videoDir.string() + "/frame_" + std::to_string(frameNumber) + ".jpg";
+            std::string imageName = videoDir.string() + "/" + videoDir.string() + "_frame_" + std::to_string(frameNumber) + ".jpg";
             cv::imwrite(imageName, frame);
             framesSaved++;
         }
